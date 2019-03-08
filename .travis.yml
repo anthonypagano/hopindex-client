@@ -3,3 +3,10 @@
  cache:
    directories:
      - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: 3d1dcf89-2035-4fe9-b681-9ebad93b93bf
+  app: shrouded-sierra-74421
+  on:
+    repo: anthonypagano/hopindex-client
