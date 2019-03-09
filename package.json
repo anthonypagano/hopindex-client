@@ -28,7 +28,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "jest-util": "^23.4.0",
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0"
