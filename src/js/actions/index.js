@@ -32,3 +32,13 @@ export function getData() {
         });
     };
   }
+
+export function getRecentBeers() {
+    return function(dispatch) {
+      return fetch("https://dry-depths-20265.herokuapp.com/recent", {mode: 'no-cors'})
+        .then(response => response.json())
+        .then(json => {
+          dispatch({ type: "RECENT_BEERS", payload: json });
+        });
+    };
+  }

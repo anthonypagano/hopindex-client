@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import BrewerySearch from './brewery-search.js';
 import Intro from './intro.js';
 import BeerList from './beer-list.js';
+import Posts from './posts.js';
 import Form from "./form.js";
 import { deleteBeer } from '../actions/index';
 
@@ -28,6 +29,7 @@ export class Home extends React.Component {
                 <Intro />
                 <BrewerySearch onChange={breweryName => this.setState({breweryName})} />
                 <BeerList beers={beers} deleteBeer={this.props.deleteBeer}/>
+                <Posts />
                 <Form />
             </div>
         );

@@ -1,19 +1,19 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { getData } from "../actions/index";
+import { getRecentBeers } from "../actions/index";
 export class Post extends Component {
   constructor() {
     super();
   }
   componentDidMount() {
-    this.props.getData();
+    this.props.getRecentBeers();
   }
   render() {
     return (
       <ul>
         {this.props.beers.map(beer => (
           <li key={beer.id}>
-            {beer.title}
+            {beer.beerName}
           </li>
         ))}
       </ul>
@@ -22,7 +22,7 @@ export class Post extends Component {
 }
 function mapStateToProps(state) {
   return {
-    beers: state.remoteArticles.slice(0, 10)
+    beers: state.beers
   };
 }
-export default connect(mapStateToProps,{ getData })(Post);
+export default connect(mapStateToProps,{ getRecentBeers })(Post);

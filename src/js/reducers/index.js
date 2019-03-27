@@ -1,4 +1,4 @@
-import { ADD_BEER, DELETE_BEER } from "../actions/index";
+import { ADD_BEER, DELETE_BEER, RECENT_BEERS } from "../actions/index";
 
 const initialState = {
     beers: [
@@ -19,6 +19,12 @@ function rootReducer(state = initialState, action) {
   if (action.type === DELETE_BEER) {
     return Object.assign({}, state, {
       beers: state.beers.filter(beer => beer.id !== action.id)
+    });
+  }
+
+  if (action.type === "RECENT_BEERS") {
+    return Object.assign({}, state, {
+      beers: state.beers.concat(action.payload)
     });
   }
 
