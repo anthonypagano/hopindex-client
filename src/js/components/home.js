@@ -3,7 +3,6 @@ import {connect} from 'react-redux';
 import BrewerySearch from './brewery-search.js';
 import Intro from './intro.js';
 import BeerList from './beer-list.js';
-import Posts from './posts.js';
 import Form from "./form.js";
 import { deleteBeer } from '../actions/index';
 
@@ -20,25 +19,24 @@ export class Home extends React.Component {
 
         const beers = this.props.beers.filter(beer =>
             beer.brewery.toLowerCase().includes(
-                this.state.breweryName.toLowerCase()
-            )
-        );
+            this.state.breweryName.toLowerCase()
+        )
+    );
 
-        return (
-            <div>
-                <Intro />
-                <BrewerySearch onChange={breweryName => this.setState({breweryName})} />
-                <BeerList beers={beers} deleteBeer={this.props.deleteBeer}/>
-                <Posts />
-                <Form />
-            </div>
-        );
+    return (
+        <div>
+            <Intro />
+            <BrewerySearch onChange={breweryName => this.setState({breweryName})} />
+            <BeerList beers={beers} deleteBeer={this.props.deleteBeer} />
+            <Form />
+        </div>
+    );
     }
 }
 
 const mapStateToProps = state => ({
     beers: state.beers.sort((a, b) => {
-        return a.beername > b.beername ? 1 : a.beername < b.beername ? -1 : 0; })
+    return a.beername > b.beername ? 1 : a.beername < b.beername ? -1 : 0; })
 });
 
 function mapDispatchToProps(dispatch) {

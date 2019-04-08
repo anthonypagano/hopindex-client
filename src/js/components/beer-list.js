@@ -15,7 +15,7 @@ export default function BeerList(props) {
     );
     return (
         <section>
-            {beers}
+            { beers }
         </section>
     );
 }
