@@ -1,7 +1,8 @@
-import { ADD_BEER_TO_LIST, DELETE_BEER_FROM_LIST, DATA_LOADED } from "../actions/index";
+import { ADD_BEER_TO_LIST, DELETE_BEER_FROM_LIST, DATA_LOADED, RECENT_BEERS, UPDATE_RECENT_BEERS } from "../actions/index";
 
 const initialState = {
-  beers: []
+  beers: [],
+  recentBeers: []
 }
 
 function rootReducer(state = initialState, action) {
@@ -23,11 +24,15 @@ function rootReducer(state = initialState, action) {
     });
   }
 
-  if (action.type === "RECENT_BEERS") {
+  if (action.type === RECENT_BEERS) {
     return Object.assign({}, state, {
-      beers: state.beers.concat(action.payload)
-  });
-}
+      recentBeers: state.recentBeers.concat(action.payload)
+    });
+  }
+
+  if (action.type === UPDATE_RECENT_BEERS) {
+    state = Object.assign({}, initialState);
+  }
 
   return state;
 }

@@ -1,30 +1,40 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Open Sans",
-  sans-serif;
-  font-size: 20px;
-  color: #444;
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  color: black;
   text-align: center;
   line-height: 1.5;
-}
-
-header {
 }
 
 section {
   padding: 15px 15px;
 }
 
-p {
-  margin: 0 auto;
-  max-width: 650px;
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 45px;
+  line-height: 1.25;
+  color: #002D56;
+  text-align: left;
 }
 
-p + p {
-  margin-top: 15px;
+.header-item {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 ul {
@@ -35,8 +45,18 @@ ul {
 }
 
 li {
-  display: inline-flex;
+  display: table-cell;
   margin: 0 0 5px 0;
+}
+
+.search-label {
+  font-size: 20px;
+}
+
+.search-box {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .brewery-list {
@@ -45,31 +65,87 @@ li {
   border-radius: 5px;
 }
 
-.add-beer-button {
-  margin: 0 0 15px 0;
+.button {
   font-size: 16px;
   padding: 5px;
   border-radius: 5px;
   border: 1px solid white;
   color: white;
-  background-color: orange;
-  text-decoration: none;
+  background-color: #002D56;
+  margin: 10px;
+  cursor: pointer;
 }
 
-@media only screen and (max-width: 1099px) {  
+.how-to {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.how-to p {
+  margin: 0 0 10px 0;
+}
+
+.supporting-images {
+  margin: 20px 0 0 0;
+  border: 3px solid #002D56;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 1099px) {
+  .header-breaks {
+    display: none;
+  }
+
+  header {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 45px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .header-item {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .header ul {
+    list-style-type: none;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .header li {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
   ul {
     list-style-type: none;
     margin: 0 auto 10px;
     padding: 10px;
-    width: 300px;
-    border: 1px solid black;
-    border-radius: 11px;
   }
-    
+
   li {
     display: block;
     margin: 0 auto 5px auto;
     text-align: left;
     width: 300px;
-  } 
+    line-height: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .supporting-images {
+    width: 300px;
+  }
 }
