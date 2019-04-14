@@ -1,18 +1,39 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { deleteBeer } from '../actions/index';
 import BrewerySearch from './brewery-search.js';
 import Intro from './intro.js';
 import BeerList from './beer-list.js';
 import Form from "./form.js";
-import { deleteBeer } from '../actions/index';
 
 export class Home extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            breweryName: ''
+            breweryName: '',
+            showBeerList: false,
+            showAddBeerForm: false
         }
+    }
+
+    addBeerForm() {
+        this.setState ({
+            showAddBeerForm:!this.state.showAddBeerForm
+        })
+    }
+
+    beerList() {
+        this.setState ({
+            showBeerList: true
+        })
+    }
+
+    hideBeerList() {
+        this.setState ({
+            showBeerList: false
+        })
     }
 
     render() {
@@ -26,9 +47,33 @@ export class Home extends React.Component {
     return (
         <div>
             <Intro />
-            <BrewerySearch onChange={breweryName => this.setState({breweryName})} />
-            <BeerList beers={beers} deleteBeer={this.props.deleteBeer} />
-            <Form />
+            <Link to="/how">
+                <input type="button" className="button" value="HOW TO USE THE HOP INDEX" />
+            </Link>
+            <Link to="/recent">
+                <input type="button" className="button" value="SEE 5 MOST RECENT ENTRIES" />
+            </Link>
+
+            <div onClick={()=>this.beerList()}>
+                <BrewerySearch onChange={breweryName => this.setState({breweryName})} />
+            </div>
+            {
+                this.state.showBeerList?
+                <BeerList beers={beers} deleteBeer={this.props.deleteBeer} />
+                : null
+            }
+            {
+                this.state.showBeerList?
+                <input type="button" className="button" onClick={()=>this.hideBeerList()} value="CLOSE THE LIST" />
+                : null
+            }
+            <input type="button" className="button" onClick={()=>this.addBeerForm()} value="ADD A NEW BEER" />
+            {
+                this.state.showAddBeerForm?
+                <Form />
+                : null
+            }
+            <br /><img src={require("../images/bcs-lineup.jpg")} id="bcs-lineup" alt="2018 Bourbon County Stout lineup in the taproom" className="supporting-images" />
         </div>
     );
     }

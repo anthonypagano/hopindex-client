@@ -1,3 +1,4 @@
+// search the store
 export const SEARCH = "SEARCH";
 export function search(value) {
   return {
@@ -6,6 +7,7 @@ export function search(value) {
   };
 }
 
+// load all data
 export const DATA_LOADED = "DATA_LOADED";
 export function dataLoaded(payload) {
   return {
@@ -14,7 +16,6 @@ export function dataLoaded(payload) {
   };
 };
 
-// load all data
 export function getData() {
   return function(dispatch) {
     return fetch(`http://localhost:8080/beer`)
@@ -25,6 +26,7 @@ export function getData() {
   };
 }
 
+// add a beer to the index
 export const ADD_BEER_TO_LIST = "ADD_BEER_TO_LIST";
 export function addBeerToList(payload) {
   return {
@@ -48,7 +50,7 @@ export const addBeer = (payload) => dispatch => {
     }
     return res.json();
   })
-  .then(id => {
+  .then(payload => {
     dispatch(addBeerToList(payload));
   });
 };
@@ -81,6 +83,15 @@ export const deleteBeer = (id) => dispatch => {
   });
 };
 
+//handle recent beers list
+export const RECENT_BEERS = "RECENT_BEERS";
+export function recentBeers(payload) {
+  return {
+    type: "RECENT_BEERS",
+    payload
+  };
+};
+
 //return the 5 most recent entries
 export function getRecentBeers() {
   return function(dispatch) {
@@ -89,7 +100,14 @@ export function getRecentBeers() {
     })
     .then(response => response.json())
     .then(json => {
-      dispatch({ type: "RECENT_BEERS", payload: json });
+      dispatch(recentBeers(json));
     });
   };
 }
+
+export const UPDATE_RECENT_BEERS = "UPDATE_RECENT_BEERS";
+export function updateRecentBeers() {
+  return {
+    type: "UPDATE_RECENT_BEERS"
+  };
+};

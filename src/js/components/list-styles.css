@@ -1,0 +1,95 @@
+.search-results {
+  max-width: 1200px;
+  border: 3px solid #002D56;
+  border-radius: 11px;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.column-header {
+  font-weight: bold;
+}
+
+.beer-name, .brewery-name {
+  width: 250px;
+  text-align: left;
+}
+
+.abv, .rating, .style {
+  width: 75px;
+  text-align: left;
+}
+
+.city-state {
+  width: 150px;
+  text-align: left;
+}
+
+.notes {
+  width: 300px;
+  text-align: left;
+}
+
+.deletebtnwrapper {
+  width: 50px;
+  text-align: left;
+}
+
+.deletebtn {
+  font-size: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+
+.no-search-results, .hide-no-results, .delete {
+  display: none;
+}
+
+.no-results, .trashcan {
+  display: block;
+}
+
+@media only screen and (max-width: 1099px) {
+  .mobile-column-header, .trashcan {
+    display: none;
+  }
+  
+  .search-results {
+    border: none;
+  }
+
+  .beer-details {
+    border: 3px solid #002D56;
+    border-radius: 11px;
+    width: 300px;
+  }
+
+  .beer-name, .brewery-name, .notes, .city-state {
+    min-width: 200px;
+    margin: 2px 0;
+    padding-right: 10px;
+  }
+  
+  .abv, .rating, .style {
+    min-width: 100px;
+    margin: 2px 0;
+    padding-right: 10px;
+  }
+
+  .deletebtnwrapper {
+    margin: 0;
+  }
+
+  .deletebtn {
+    padding: 0;
+  }
+
+  .delete {
+    display: block;
+  }
+}
