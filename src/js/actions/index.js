@@ -1,3 +1,5 @@
+import { API_ORIGIN } from "../config";
+
 // search the store
 export const SEARCH = "SEARCH";
 export function search(value) {
@@ -18,7 +20,7 @@ export function dataLoaded(payload) {
 
 export function getData() {
   return function(dispatch) {
-    return fetch(`http://localhost:8080/beer`)
+    return fetch(`${API_ORIGIN}/beer`)
       .then(response => response.json())
       .then(json => {
         dispatch(dataLoaded(json));
@@ -36,7 +38,7 @@ export function addBeerToList(payload) {
 };
 
 export const addBeer = (payload) => dispatch => {
-  fetch(`http://localhost:8080/beer`, {
+  fetch(`${API_ORIGIN}/beer`, {
     method: "POST",
     mode: "cors",
     headers: {
@@ -65,7 +67,7 @@ export function deleteBeerFromList(id){
 };
 
 export const deleteBeer = (id) => dispatch => {
-  fetch(`http://localhost:8080/beer/${id}`, {
+  fetch(`${API_ORIGIN}/beer/${id}`, {
     method: "DELETE",
     mode: "cors",
     headers: {
@@ -95,7 +97,7 @@ export function recentBeers(payload) {
 //return the 5 most recent entries
 export function getRecentBeers() {
   return function(dispatch) {
-    return fetch(`http://localhost:8080/recent`, {
+    return fetch(`${API_ORIGIN}/recent`, {
       mode: 'cors'
     })
     .then(response => response.json())
