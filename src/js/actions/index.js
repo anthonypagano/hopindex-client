@@ -1,4 +1,4 @@
-import { API_ORIGIN } from "../config";
+import { API_ORIGIN } from "../../config.js";
 
 // search the store
 export const SEARCH = "SEARCH";
