@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { addBeer } from "../actions/index";
-import uuidv1 from "uuid";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addBeer } from '../actions/index';
+import uuidv1 from 'uuid';
 import './form-styles.css';
 
 class ConnectedForm extends Component {

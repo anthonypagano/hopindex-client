@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { getRecentBeers } from "../actions/index";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getRecentBeers } from '../actions/index';
 
 export class RecentBeers extends Component {
 

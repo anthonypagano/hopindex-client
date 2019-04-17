@@ -2,10 +2,10 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { deleteBeer } from '../actions/index';
-import BrewerySearch from './brewery-search.js';
-import Intro from './intro.js';
-import BeerList from './beer-list.js';
-import Form from "./form.js";
+import BrewerySearch from './brewery-search';
+import Intro from './intro';
+import BeerList from './beer-list';
+import Form from "./form";
 
 export class Home extends React.Component {
 
@@ -67,13 +67,16 @@ export class Home extends React.Component {
                 <input type="button" className="button" onClick={()=>this.hideBeerList()} value="CLOSE THE LIST" />
                 : null
             }
-            <input type="button" className="button" onClick={()=>this.addBeerForm()} value="ADD A NEW BEER" />
+            <input type="button" className="button add-new" onClick={()=>this.addBeerForm()} value="ADD A NEW BEER" />
             {
                 this.state.showAddBeerForm?
-                <Form />
+                <div>
+                    <Form />
+                    <input type="button" className="button close-it" onClick={()=>this.addBeerForm()} value="CLOSE" />
+                </div>
                 : null
             }
-            <br /><img src={require("../images/bcs-lineup.jpg")} id="bcs-lineup" alt="2018 Bourbon County Stout lineup in the taproom" className="supporting-images" />
+            <br /><img src={require("../images/bcs-lineup.jpg")} id="bcs-lineup" alt="2018 Bourbon County Stout lineup in the taproom" className="goose" />
         </div>
     );
     }
