@@ -6,19 +6,19 @@ The Hop Index allows an easy way to determine if I have tried a particular beer 
 
 ## Screenshots
 Landing Page<br>
-![landing page](public/images/.png)
+![landing page](public/images/hopindex-landing.png)
 
 Search Results view<br>
-![search results](public/images/.png)
+![search results](public/images/hopindex-search-results.png)
 
 Add A Beer form<br>
-![add a beer form](public/images/.png)
+![add a beer form](public/images/hopindex-add-beer-form.png)
 
 How To Use The Hop Index page<br>
-![how to use the hop index page](public/images/.png)
+![how to use the hop index page](public/images/hopindex-how-to.png)
 
 5 Most Recent Entries page<br>
-![5 most recent entries page](public/images/.png)
+![5 most recent entries page](public/images/hopindex-most-recent.png)
 
 ## Front End
 - HTML5
