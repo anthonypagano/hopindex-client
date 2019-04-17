@@ -76,6 +76,20 @@ li {
   cursor: pointer;
 }
 
+.close-it {
+  margin: 10px 10px 0 10px;
+}
+
+.goose {
+  margin: 0;
+  border: 3px solid #002D56;
+  border-radius: 5px;
+}
+
+.add-new {
+  margin-bottom: 30px;
+}
+
 .how-to {
   max-width: 1200px;
   margin: 0 auto;
@@ -145,7 +159,7 @@ li {
 }
 
 @media only screen and (max-width: 600px) {
-  .supporting-images {
+  .supporting-images, .goose {
     width: 300px;
   }
 }

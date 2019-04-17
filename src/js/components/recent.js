@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from "react-redux";
-import { getRecentBeers } from "../actions/index";
-import { updateRecentBeers } from "../actions/index";
-import { getData } from "../actions/index";
-import RecentBeers from './recent-beers.js';
+import { connect } from 'react-redux';
+import { getRecentBeers } from '../actions/index';
+import { updateRecentBeers } from '../actions/index';
+import { getData } from '../actions/index';
+import RecentBeers from './recent-beers';
 
 export class Recent extends React.Component {
     state = {};

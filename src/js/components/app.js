@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { connect } from "react-redux";
 import { getData } from "../actions/index";
-import Header from './header.js';
-import Home from './home.js';
-import HowTo from './how-to.js';
-import Recent from './recent.js';
+import Header from './header';
+import Home from './home';
+import HowTo from './how-to';
+import Recent from './recent';
 
 class App extends Component {
   state = {};
