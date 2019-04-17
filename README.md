@@ -26,17 +26,19 @@ How To Use The Hop Index page<br>
 - JavaScript
 - React
 - Redux
+- Enzyme
 
 ## Back End
 - Node.js
 - Express.js
 - MongoDB
 - Mongoose
-- mLab database
-- Mocha and Chai for testing
+- Mocha 
+- Chai
 
 ## Hosting
 - Heroku
+- mLab DB
 
 ## Continious Integration / Build Server
 - Travis CI
