@@ -1,1 +1,1 @@
-exports.API_ORIGIN = 'http://localhost:8080';
+exports.API_ORIGIN = 'https://dry-depths-20265.herokuapp.com';
