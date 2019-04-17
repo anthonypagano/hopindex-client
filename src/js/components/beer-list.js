@@ -28,7 +28,7 @@ export default function BeerList(props) {
         </ul>
     );
     return (
-        <section>
+        <section aria-live="assertive">
             <div className={beerListStyle}>
                 <ul className="mobile-column-header">
                     <li className="brewery-name column-header">Brewery</li>

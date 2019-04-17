@@ -156,6 +156,10 @@ li {
     width: 300px;
     line-height: 1;
   }
+  
+  section {
+    padding: 0 5px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
