@@ -20,13 +20,13 @@ export class Recent extends React.Component {
 
     render() {
         return (
-            <div>
+            <section aria-live="polite">
                 <p>Below are the 5 most recent beers that have been logged</p>
                 <RecentBeers />
                 <Link to="/">
                     <input type="button" className="button" value="BACK TO THE INDEX" />
                 </Link>
-            </div>
+            </section>
         );
     }
 }
