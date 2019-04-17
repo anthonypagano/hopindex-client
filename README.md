@@ -1,21 +1,24 @@
 # The Hop Index
-This app serves to provide an easy way to determine if I have a particular album in my music collection as not all of my music is digitized and hence not on my phone. The landing page features that last 5 additions to the collection and a dropdown list of the name of every band that has an entry. Choosing a band from the list will bring back all of the albums I have from the selected group, alphabetically by album title, since that is the level of detail I'm looking to have at my fingertips. I can add, remove, or update details about the albums as needed.
+The Hop Index allows an easy way to determine if I have tried a particular beer as the craft beer movement around the world has exploded with new options coming out on a daily basis. The landing page features a search by brewery box that will first bring back all of the beers I have tried but as soon as you start typing in the name of a brewery the results list will filter on the fly. At that point I'll know if I have had a particular beer I'm contemplating on ordering or buying. If I have had it it'll show me the necessary information. The name, what style it is, the ABV%, who brewed it, the rating I gave it, the location of where it was brewed and any specific notes about it that I wanted to remember like it if was barrel aged or brewed with something specific like fruit or nuts etc. If I have not had a beer that I'm being offered I can click the Add A Beer button and enter the necessary info. There is also a button to take me to the 5 most recent beers I've had as well as a button to take me to a How To Use the app with instructions and explanations of the ratings.
 
 ## Demo
 [Live Demo] (https://shrouded-sierra-74421.herokuapp.com/)
 
 ## Screenshots
 Landing Page<br>
-![landing page](public/images/album-landing.png)
+![landing page](public/images/.png)
 
-Add An Album
-![add an album](public/images/album-add-new.png)
+Search Results view<br>
+![search results](public/images/.png)
 
-Band Selected
-![band selected](public/images/album-band-selected.png)
+Add A Beer form<br>
+![add a beer form](public/images/.png)
 
-Update An album
-![update an album](public/images/album-edit-entry.png)
+How To Use The Hop Index page<br>
+![how to use the hop index page](public/images/.png)
+
+5 Most Recent Entries page<br>
+![5 most recent entries page](public/images/.png)
 
 ## Front End
 - HTML5
