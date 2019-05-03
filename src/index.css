@@ -91,14 +91,15 @@ li {
 }
 
 .how-to {
-  max-width: 1200px;
+  max-width: 775px;
   margin: 0 auto;
   padding: 10px;
   font-size: 24px;
 }
 
 .how-to p {
-  margin: 0 0 10px 0;
+  margin: 0 0 15px 0;
+  text-align: left;
 }
 
 .supporting-images {
