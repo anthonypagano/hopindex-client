@@ -8,6 +8,7 @@ export default function HowTo() {
             <p>Not sure if you've had a specific beer? Search for it by the brewery name in the search box.</p>
             <p>If you see the "you have not had this beer" message or if you do not see it in the list, then you have not had it; in which case, give it a try!</p>
             <p>After you've finished your beer of choice go ahead and click the "Add A Beer" form to add your entry to the database.</p>
+            <p>ABV is most often mesured as a percentage but some breweries measure ABV in plato so feel free to enter whichever measurement you find on the bottle, can or brewers website.</p>
             <p>After it's entered, you'll see it in the list or you can search for it again by searching by brewery name.</p>
             <h2>Ratings Explanation:</h2>
             <p>The range for ratings are whole numbers with 1 being just plain terrible and 5 being amazing! Here's a more detailed explanation for each level.</p>
