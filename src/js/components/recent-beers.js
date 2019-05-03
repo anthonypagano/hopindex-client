@@ -10,7 +10,7 @@ export class RecentBeers extends Component {
             <li className="brewery-name">{beer.brewery}</li>
             <li className="beer-name">{beer.beerName}</li>
             <li className="style">{beer.style}</li>
-            <li className="abv">{beer.abv}%</li>
+            <li className="abv">{beer.abv}</li>
             <li className="rating">{beer.rating}</li>
             <li className="city-state">{beer.cityState}</li>
             <li className="notes">{beer.notes}</li>
