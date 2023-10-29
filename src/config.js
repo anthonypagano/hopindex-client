@@ -1,1 +1,1 @@
-exports.API_ORIGIN = 'https://hopindex-api.vercel.app/';
+exports.API_ORIGIN = 'https://hopindex-api.vercel.app';
