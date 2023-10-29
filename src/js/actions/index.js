@@ -40,7 +40,7 @@ export function addBeerToList(payload) {
 export const addBeer = (payload) => dispatch => {
   fetch(`${API_ORIGIN}/beer`, {
     method: "POST",
-    mode: "cors",
+    mode: "no-cors",
     headers: {
       "content-type": "application/json"
     },
@@ -69,7 +69,7 @@ export function deleteBeerFromList(id){
 export const deleteBeer = (id) => dispatch => {
   fetch(`${API_ORIGIN}/beer/${id}`, {
     method: "DELETE",
-    mode: "cors",
+    mode: "no-cors",
     headers: {
       "content-type": "application/json"
     }
@@ -98,7 +98,7 @@ export function recentBeers(payload) {
 export function getRecentBeers() {
   return function(dispatch) {
     return fetch(`${API_ORIGIN}/recent`, {
-      mode: 'cors'
+      mode: 'no-cors'
     })
     .then(response => response.json())
     .then(json => {
