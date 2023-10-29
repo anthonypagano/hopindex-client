@@ -1,1 +1,1 @@
-exports.API_ORIGIN = 'https://dry-depths-20265.herokuapp.com';
+exports.API_ORIGIN = 'https://hopindex-api.vercel.app/';
